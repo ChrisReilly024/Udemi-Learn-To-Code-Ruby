@@ -1,4 +1,7 @@
 class Gadget
+    attr_reader :product_id
+    attr_writer :password
+    attr_accessor :user_name
     def initialize
         @user_name = "User #{rand(1...100)}"
         @password = 'password'
@@ -8,30 +11,30 @@ class Gadget
     def to_s
         "#{@user_name}'s password is #{@password} and product_id is #{@product_id}. It is made from the #{self.class} class and its oject id is #{self.object_id}"
     end
-# getters
-    def user_name
-        @user_name
-    end
+# # getters
+#     def user_name
+#         @user_name
+#     end
     
-    def password
-        @password
-    end
+#     def password
+#         @password
+#     end
 
-    def product_id
-        @product_id
-    end
-# setters
-    def user_name=(name)
-        @user_name = name
-    end
+#     def product_id
+#         @product_id
+#     end
+# # setters
+#     def user_name=(name)
+#         @user_name = name
+#     end
     
-    def password=(pass)
-        @password = pass
-    end
+#     def password=(pass)
+#         @password = pass
+#     end
 
-    def product_id=(id)
-        @product_id = id
-    end
+#     def product_id=(id)
+#         @product_id = id
+#     end
 
 end
 
@@ -40,13 +43,13 @@ phone = Gadget.new
 microwave = Gadget.new
 
 p laptop.user_name
-p laptop.password
-p laptop.product_id
+# p laptop.password
+p laptop.product_id 
 
 laptop.user_name = 'me_2'
 laptop.password = 4567
-laptop.product_id = 'ab_01'
+laptop.product_id
 
 p laptop.user_name
-p laptop.password
+# p laptop.password
 p laptop.product_id

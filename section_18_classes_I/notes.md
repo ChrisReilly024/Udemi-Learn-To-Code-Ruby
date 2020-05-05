@@ -69,11 +69,16 @@ SETTER METHOD
     - allows user to change an object's state
     - does not expose current variables, only changes them
     - good practice to define method with an =
-    - = allows for syntaxical surgar for method call  user_name = 'me' 
+    - = allows for syntactical surgar for method call  user_name = 'me' 
         def user_name=(new_name)
             @user_name = new_name
         end
-    
+ATTR METHODS
+    - shortcuts for getters/setters
+    - use symbols for variable attr's
+    - attr_reader returns instance variable
+    - attr_writer allows for setter
+    - attr_accessor = getter and setter
     
     - def username
         @username
