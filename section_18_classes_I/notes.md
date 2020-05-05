@@ -11,12 +11,17 @@ CLASSES
         - each object has a custom state
         - begin with an @ to define an instance variable
         - variables are local to method, we need instance variables to be available to the entire object so we use @ to define
+        - when called in methods @ must precede so Ruby knows where to look for value
+        - variables cannot be accessed directly unless a getter method is defined
     INSTANT METHODS
         - interact with an object and belong to it. 
+        - object calling the method on is 'receiver'
+        - 
     INITIALIZE METHOD
      - is run automatically when a new instance is created
      - assigns an object's initial state, it's default instance variables
      - state can be altered later, through methods
+     - initialize method is private by default, cannot be accessed by calling it directly.
     ENCAPSULATION
         - object tries to restrict access to it's data and prevent it from being manipulated
         - instance methods will allow user to interact with object in a protected way.
