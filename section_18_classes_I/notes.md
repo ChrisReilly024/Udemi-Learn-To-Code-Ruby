@@ -59,6 +59,28 @@ METHODS
         - returns an array of an objects instance variables
         - does not return values, just variables name
         - cat.instance_variables [@:name, @:age, @:color]
+GETTER METHOD
+    - instance variables are protected by default, cannot be called directly (encapsulation)
+    - can access them through a getter method
+    - getter method does not access variables directly but rather through its method call
+    - good practice to name method same as variable
+    
+    - def username
+        @username
+      end
+
+    
+
+
+
+OVERRIDING METHODS
+    - can define new function for methods within instance variables
+    ex.
+        - .to_s gives a string like representation of an object
+        - when called on class instance it will return object id
+        - Ruby looks for a called method first in the objects class
+        - if it can't find it, it will go up to the first superclass and look there and continue til found, then runs the method
+        - if we define .to_s in our class, Ruby will fun the first instance of .to_s it finds instead of it's default function
 
 ALIASES
     - creating a variable = to another variable doesn't create a new object
