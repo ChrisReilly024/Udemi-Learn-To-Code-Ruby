@@ -2,9 +2,9 @@ class Gadget
     attr_reader :product_id
     attr_writer :password
     attr_accessor :user_name
-    def initialize
-        @user_name = "User #{rand(1...100)}"
-        @password = 'password'
+    def initialize(user_name, password)
+        @user_name = user_name
+        @password = password
         @product_id = "#{('a'..'z').to_a.sample}_#{rand(1...100)}"
     end
 
@@ -38,18 +38,18 @@ class Gadget
 
 end
 
-laptop = Gadget.new
-phone = Gadget.new
-microwave = Gadget.new
+laptop = Gadget.new('me', 1234)
+# phone = Gadget.new
+# microwave = Gadget.new
 
 p laptop.user_name
-# p laptop.password
+# # p laptop.password
 p laptop.product_id 
 
-laptop.user_name = 'me_2'
-laptop.password = 4567
-laptop.product_id
+# laptop.user_name = 'me_2'
+# laptop.password = 4567
+# laptop.product_id
 
-p laptop.user_name
-# p laptop.password
-p laptop.product_id
+# p laptop.user_name
+# # p laptop.password
+# p laptop.product_id
