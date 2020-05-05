@@ -64,6 +64,16 @@ GETTER METHOD
     - can access them through a getter method
     - getter method does not access variables directly but rather through its method call
     - good practice to name method same as variable
+SETTER METHOD
+    - also called writer methods
+    - allows user to change an object's state
+    - does not expose current variables, only changes them
+    - good practice to define method with an =
+    - = allows for syntaxical surgar for method call  user_name = 'me' 
+        def user_name=(new_name)
+            @user_name = new_name
+        end
+    
     
     - def username
         @username
