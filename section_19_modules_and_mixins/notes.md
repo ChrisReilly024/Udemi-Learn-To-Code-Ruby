@@ -19,4 +19,23 @@ SYNTAX & STYLE
         - constants are accessed with scope resolution operator ::
         - SRO tells object to look in what module to find constant
         - class::constant
-    
+
+MIXINS
+    - mixin is a module added to a class
+    - it injects behavior into a class
+    - it allows us to mimic inheritance from more than one class
+    - modules are imported with include keyword
+        - ex. include Comparible allows class to make use of <> <=> ect.)
+        - best practice is place above initializer
+    - Why import instead of including method in original class?
+        - classes should have a specific object model
+        - mixins allow code to be brought in to a class that is unrelated to it's model
+        - since classes inherit this will ensure sub classes do not get useless runtime consuming behaviors it doesn't need
+        - mixins are DRY, write once use in multiple classes
+
+CLASS INHERITANCE VS MIXINS
+    - class inheritance should be a 'is a' relationship
+        - ex. a king is a type of chess piece
+    - modules should have have an 'has' relationship
+        - it has functionality
+        - it has a feature set a class can use
