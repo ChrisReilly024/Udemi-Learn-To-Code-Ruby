@@ -50,4 +50,30 @@ end
 # puts Time.now + 4.hours
 # puts Time.now + 7.days
 # puts 5.times {|i| puts i}
-5.custom_times {|i| puts i}
+# 5.custom_times {|i| puts i}
+
+class Book
+    def initialize(title,author,pages)
+        @title = title
+        @author = author
+        @pages = pages
+    end
+end
+
+goosebumps = Book.new("Night of the Living dummy", "R.L. Stine", 100)
+
+# p goosebumps
+
+class Book
+    def read
+        1.step(@pages, 10) {|page| puts "Reading page #{page}"...}
+        puts "Done! #{@title} was a great book!"
+    end
+end
+
+animal_farm = Book.new("Animal Farm", 'George Orwell', 50)
+
+# p animal_farm
+
+goosebumps.read
+animal_farm.read
