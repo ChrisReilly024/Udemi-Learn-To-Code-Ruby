@@ -1,4 +1,5 @@
-SECTION 18
+-------------------------------------------------------------------------
+SECTION 18 CLASSES 1
 
 Object = custom container for data, groups functionaliites into a single object
 
@@ -100,8 +101,9 @@ ALIASES
     - it just creates another pointer, a second reference to the object
     - x = 5,  y = x,  y.object_id will = x.object_id
     - if x changes, y will not
------------------------------------------
-SECTION 19
+-------------------------------------------------------------------------
+
+SECTION 19 MIXINS & MODULES
 
 MODULES
 
@@ -173,9 +175,9 @@ ENUMERABLE MODULE
       object.each {|attribute| p attribute}
       object.select {|attribute| attribute = 'apple' }
     - ENUMERABLE each method gives us access to a whole array of methods without having to define multiple methods
-    ---------------------------------------------- 
+--------------------------------------------------------------------------- 
 
-    SECTION 20
+SECTION 20 CLASSES II
 
 
     PRIVATE METHODS
@@ -259,3 +261,40 @@ CLASS VARIABLES AND METHODS
               @@maker
             end
           -every object can call this without duplicating it in its creation
+----------------------------------------------------------------------------
+
+SECTION 21 CLASSES III
+
+INHERITANCE
+    - a way to obtain all methods from another class
+    - DRY principle
+    - superclass = parent class
+    - subclass = child class
+    - ** class can have only 1 superclass ** (big reason for modules)
+    - subclass = 'is a'  a type of superclass
+    SYNTAX
+        - class inherits with < symbol
+            class Car < Vehicle
+            car class inherits vehicle methods
+    - can obtain method_chain with .ancestors
+    - can check indiviudal class heirarchy with <
+        - Manager < Worker
+        - Manager inherits from Worker
+
+    .is_a(class) returns true if object inherits from class
+    .instance_of?(class) returns true if object is instance of class
+
+SUPER KEYWORD
+    - DRY principle
+    - removes need to retype instance variables for each subclass
+    - include instances you want inherited in the super function
+        super(name, age)
+    - can also be used to add more functionality to a method
+    ex.  def introduce
+            'hello'
+        end
+        def introduce
+            result = super
+            result += 'my name is ${name}
+        end
+        introduce('me') = hello my name is me
