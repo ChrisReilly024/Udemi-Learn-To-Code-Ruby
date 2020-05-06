@@ -170,3 +170,57 @@ ENUMERABLE MODULE
       object.select {|attribute| attribute = 'apple' }
     - ENUMERABLE each method gives us access to a whole array of methods without having to define multiple methods
     ---------------------------------------------- 
+
+    PRIVATE METHODS
+        - recall we can't call initialize b/c it is 'private'
+        - private methodscannot be called outside of the object. It can only be called by another instance method on the same object
+        - set to private by simply typing private into the class
+        - anything below the private line will be private
+        - trying to call a private method returns an error
+        - can type public below private to return all below it to public
+            private
+        ex.   def test1
+                do something
+              end
+            public
+              def test2
+                do something
+              end
+        - test1 cannot be called by user but test 2 can. 
+
+    PROTECTED METHODS
+      -review
+            - Public methods are free to all to use and allow interaction  with object
+            - private methods cannot be invoked by user or other objects
+
+      - protected methods can be called by any object of the same class
+      - do to give attirbutes getters if you want them hidden
+      - protected variable can be used in methods but cannot be called directly to get value
+        @value
+        car1.value = error, protected method
+        car1.value > car2.value will work fine but won't expose variable
+
+    ** variables can have public readers and private writers ect.
+
+METHODS OVER INSTANCES
+    - ex. bank account stores amount in pennies
+    - user will want to see their valance in dollers
+    - rather than create two variables, cents/dollers, we'll write a method
+        that will convert and display amount for user
+    - if for whatever reason, the amount of pennies in one doller changes
+        we don't have to fix all variables affected by this change, just the method
+    - DRY principle
+        - This can lead to problems on bigger projects that could  break with conflicting.
+    - PSUEDO VARIABLE
+     - variable that alters the presentation of a instance variables withouth modifying them (cents to dollers, secs to hours)
+MULTIPLE SETTERS IN ONE
+    - always preferred to interact with variables through methods, don't change, or set instance variables dierectly except for init.
+    - need to use self if calling other instance methods within a instance method
+    - Ruby will think your creating a new variable otherwise
+    ex. def change password(username,password)
+            validates and changes password
+        end
+        def reset(password)
+            self.password = password  | # using class = syntax
+        end
+STRUCTS
