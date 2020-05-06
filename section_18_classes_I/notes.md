@@ -42,10 +42,10 @@ METHODS
         - ** can only be used after class call **  
         - 5.class.superclass will == Numeric  b/c 5 is class Interger and Integer is inherited from Numeric
     .ancestor
-        - ** can only be used after class call **  
-        - will list an objects inheritance chain as an array
+        - ** can only be used on class, not an object **  
+        - will list a classes inheritance chain as an array
         - will include non-classes like kernals or modules
-        - 5.class.ancestor will  = [Integer, Numeric, Comparable, Object, Kernal, BasicObject]
+        - ex Integer.ancestor will  = [Numeric, Comparable, Object, Kernal, BasicObject]
     .methods
         - use with .sort to sort alphabetically
         - will return a list of all methods available to the object as an array
