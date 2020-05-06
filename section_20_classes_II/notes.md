@@ -1,3 +1,5 @@
+SECTION 18
+
 Object = custom container for data, groups functionaliites into a single object
 
 Purpose of Object Oriented Programming
@@ -99,6 +101,8 @@ ALIASES
     - x = 5,  y = x,  y.object_id will = x.object_id
     - if x changes, y will not
 -----------------------------------------
+SECTION 19
+
 MODULES
 
     - a toolbox or container of methods or constants
@@ -171,6 +175,9 @@ ENUMERABLE MODULE
     - ENUMERABLE each method gives us access to a whole array of methods without having to define multiple methods
     ---------------------------------------------- 
 
+    SECTION 20
+
+
     PRIVATE METHODS
         - recall we can't call initialize b/c it is 'private'
         - private methodscannot be called outside of the object. It can only be called by another instance method on the same object
@@ -228,4 +235,27 @@ STRUCTS
     - kinda like a class with only instance variables
     - complex behavior (methods,ect) should be in classes
     - structs are used when you need only a framework for an object | an object with constant state
-    
+
+CLASS VARIABLES AND METHODS
+    CLASS VARIABLE
+        - some data extends beyond scope of single object
+        - instance variables should make a specific object unique
+        - sometimes all instances have something in common
+        - if so, doesn't make sense to make this an instance variable, DRY
+        - class variables belong to the whole class, not a single object
+    CLASS METHOD
+        - a method thats available to the whole class
+        - contain functionality that does not involve a specific single instance
+        - class methods can be called even if there are no class objects
+    SYNTAX
+        - class variables use double sign @@
+        - methods must be prefixed with self keyword
+            - otherwise Ruby will think it is a instance method
+        - ** self will still refer to object, not class
+        - ex. all bikes made from same company so @@maker = bike company
+        - ex. count, count all objects created from class, not stored in instance but class itself
+        - if getter for class v doesn't use self, it doesn't have to be repeated in every instance...DRY
+        ex. def maker
+              @@maker
+            end
+          -every object can call this without duplicating it in its creation
