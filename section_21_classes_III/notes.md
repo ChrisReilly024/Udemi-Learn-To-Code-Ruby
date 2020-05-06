@@ -298,3 +298,13 @@ SUPER KEYWORD
             result += 'my name is ${name}
         end
         introduce('me') = hello my name is me
+    - if adding to super method with arguments need to use ()
+    - super() tells Ruby not to pass arguments to first call of method
+    - in initialize, super(something) passes that instance method to superclass
+    - still need to put it in initialize argument
+        -ex class Truck
+                def initialize(maker, siren)
+                    super(maker)
+                    @siren = siren
+                end
+            end
