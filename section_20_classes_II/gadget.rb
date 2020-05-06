@@ -1,3 +1,5 @@
+require_relative 'app_store'
+
 class Gadget
     attr_reader :product_id, :apps
     attr_accessor :user_name, :password
@@ -26,11 +28,23 @@ class Gadget
         #{@product_id}. It is made from the #{self.class} class and it's oject id is #{self.object_id}"
     end
 
+    def install_app(name)
+        app = AppStore.find_app(name)
+        @apps << app unless @apps.include?(app)
+    end
+
+    def delete_app(name)
+        app = apps.find {|installed_app| installed_app.name == name }
+        apps.delete(app) unless app.nil?
+    end
+
     def reset(username,password)
         @username = username
         @password = password
         @app = []
     end
+
+
 
     private
     def generate_production_number
@@ -41,13 +55,18 @@ class Gadget
         5.times {middle_digits << alpha.sample}
         "#{start_digits}-#{middle_digits}-#{end_digits}"
     end
-
     attr_writer :apps
-
-
 end
-laptop = Gadget.new('me', 'abcd')
-# p laptop.generate_production_number
-laptop.password = '3defg'
-p laptop
 
+# laptop = Gadget.new('me', 'abcd')
+# p laptop.generate_production_number
+# laptop.password = '3defg'
+# p laptop
+
+g = Gadget.new("boris", "password")
+# p g.apps
+g.install_app(:Chat)
+g.install_app(:Twitter)
+g.install_app(:Weather)
+# p g.apps
+g.delete_app(:Twitter)

@@ -224,3 +224,8 @@ MULTIPLE SETTERS IN ONE
             self.password = password  | # using class = syntax
         end
 STRUCTS
+    - are mini classes with less functionality
+    - kinda like a class with only instance variables
+    - complex behavior (methods,ect) should be in classes
+    - structs are used when you need only a framework for an object | an object with constant state
+    

@@ -63,6 +63,7 @@ class ConvenienceStore
             yield snack
         end
     end
+    
 end
 
 st = ConvenienceStore.new
