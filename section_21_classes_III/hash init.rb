@@ -14,3 +14,4 @@ end
 smith = Candidate.new('baker', 49, 'senator', 'fishing', 'new york')
 
 p smith
+

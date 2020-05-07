@@ -1,4 +1,49 @@
+SECTION 2 GETTING STARTED
+
+PUTS, PRINTS, P
+    - PUTS
+        -adds linebreak at end of line
+        - responds to user linebreak as well
+        - ex.  puts "hello
+                     world"
+            will print as hello
+                          world
+    - PRINT
+        - does not add a linebreak at the end
+        p 'hello'
+        p 'world'
+        will output helloworld
+    - p
+        - gives data about what it is printing
+        - p "hello world" will print as "hello world"
+            - the quotation marks will remain, letting you know its a string
+            - puts and print will not have the quotatons
+        - p does add linebreak like puts 
+        - p user line break is shown as /n
+
+            p "hello
+               world"
+            will print as "hello /n world"
+            p "hello"
+            p "world"
+            will print as "hello"
+                          "world"
+CONSTANTS
+    - represents something that should not change over time (names, birthyear, ect.)
+    - unlike other languages, Ruby constants can be changed
+        - Ruby will warn the user but will still change it.
+GETS
+    - stands for "get string"
+    - all input from user will be a string, user types 5 ruby gets "5"
+    - info is entered by hitting enter, Ruby will interpet this as a linebreak
+    - it will add /n at the end of the string
+    - use chomp to remove break
+CHOMP
+    - chomp will remove the last character of the string its called on
+    - using this with gets removes the /n from user input
+
 -------------------------------------------------------------------------
+
 SECTION 18 CLASSES 1
 
 Object = custom container for data, groups functionaliites into a single object
