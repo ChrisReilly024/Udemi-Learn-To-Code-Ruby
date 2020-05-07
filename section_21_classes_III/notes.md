@@ -308,3 +308,11 @@ SUPER KEYWORD
                     @siren = siren
                 end
             end
+
+SINGLETON CLASS & METHODS
+    - Singleton method is available for one object only
+    - ex  tom = Person.new,  dan = Person.new
+        def tom.cheat
+            'tom wins'
+        end
+    - only Tom can call this method
