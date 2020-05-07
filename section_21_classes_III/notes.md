@@ -316,3 +316,20 @@ SINGLETON CLASS & METHODS
             'tom wins'
         end
     - only Tom can call this method
+
+HASH INITIALIZER
+    -
+
+    - the standard initializer will break if not all agruments are given
+    - arguments given in wrong order will give incorrect values for variables
+    - using hash to initialize can solve this problem
+    - hash init will simply assign nil to attributes not given, object still created unlike standard init that would fail entirely if there's one error
+    - also ensures right data is going to the right variable regardless of order
+        def initialize('name', detials)
+            @name = name
+            @age = details[:age]
+            @job = details[:job]
+        end
+        info = {age: 40, job: banker}
+        b = Banker.new('name', info)
+    - can set default variables if no arg given  details = {}. all missing attributes will be nil
