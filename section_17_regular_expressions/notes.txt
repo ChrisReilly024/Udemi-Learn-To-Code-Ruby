@@ -1,0 +1,4 @@
+SECTION 17 REGULAR EXPRESSIONS
+
+    - start_with? end_with?, obvious
+    - 
