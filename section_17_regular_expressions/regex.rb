@@ -15,3 +15,10 @@
 # p custom_start_with?('hello', 'he')
 # p custom_end_with?('bootcamp', 'amp')
 
+
+ar = [['tom','steve','joe'], ['sally','jen','alice']]
+
+boys, girls = ar
+ 
+p boys
+p girls
