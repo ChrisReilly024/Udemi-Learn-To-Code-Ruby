@@ -16,9 +16,9 @@
 # p custom_end_with?('bootcamp', 'amp')
 
 
-ar = [['tom','steve','joe'], ['sally','jen','alice']]
+def longest_word(sentence)
+    sentence.split.inject {|max, word| max = max.length >= word.length ? max : word }    
+end
 
-boys, girls = ar
- 
-p boys
-p girls
+p longest_word('Bobby loves big scary kangaroos')
+

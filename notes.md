@@ -500,3 +500,6 @@ HASH INITIALIZER
         info = {age: 40, job: banker}
         b = Banker.new('name', info)
     - can set default variables if no arg given  details = {}. all missing attributes will be nil
+    ---------------------------------------
+    debugger code added
+    ---------------------------------------
